@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Pare de perder clientes que já compraram com você. Automação humanizada de WhatsApp para ópticas independentes — sem tecniquês, sem jargão.",
   keywords: "óptica, automação, WhatsApp, clientes, fidelização, ópticas independentes",
   openGraph: {
-    title: "Sua base de clientes é o seu maior estoque",
+    title: "Melhor Visão | Ótica com estratégia",
     description:
       "Pare de perder clientes que já compraram com você. Automação humanizada de WhatsApp para ópticas.",
     locale: "pt_BR",
