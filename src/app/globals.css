@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --petrol: #0e3f47;
+    --petrol-dark: #0a2f36;
+    --gold: #c98a1e;
+    --gold-light: #e8a93a;
+    --light: #e6f2f3;
+    --light-mid: #cde5e8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: #f9fdfE;
+    color: #1a1a1a;
+    font-family: var(--font-inter);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-lora);
+  }
+}
+
+/* Lens blur scroll effect */
+.lens-text {
+  filter: blur(6px);
+  transition: filter 0.6s ease;
+  will-change: filter;
+}
+
+.lens-text.in-focus {
+  filter: blur(0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lens-text {
+    filter: none !important;
+    transition: none !important;
+  }
+}
+
+/* WhatsApp bubble styles */
+.wpp-bubble {
+  max-width: 80%;
+  border-radius: 1rem;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  position: relative;
+}
+
+.wpp-bubble.sent {
+  background-color: #dcf8c6;
+  margin-left: auto;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.wpp-bubble.received {
+  background-color: #ffffff;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.wpp-time {
+  font-size: 0.65rem;
+  color: #6b7280;
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+/* Timeline */
+.timeline-line {
+  position: absolute;
+  left: 1.25rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--petrol), var(--gold));
+}
+
+.timeline-dot {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--petrol);
+  border: 3px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 1;
+}
+
+/* Pain cards hover */
+.pain-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pain-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(14, 63, 71, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pain-card {
+    transition: none;
+  }
+  .pain-card:hover {
+    transform: none;
+  }
+}
