@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "TheraSaaS para Ópticas | Sua base de clientes é o seu maior estoque",
+  title: "Melhor Visão | Ótica com estratégia",
   description:
     "Pare de perder clientes que já compraram com você. Automação humanizada de WhatsApp para ópticas independentes — sem tecniquês, sem jargão.",
   keywords: "óptica, automação, WhatsApp, clientes, fidelização, ópticas independentes",
